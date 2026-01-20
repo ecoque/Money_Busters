@@ -1,0 +1,30 @@
+/*
+ * DDL/TRG Script Generator - Stil Dosyası
+ * STAJYER A burada çalışacak
+ */
+
+/* Genel Ayarlar */
+.root-pane {
+    -fx-background-color: #f5f5f5;
+}
+
+/* Başlık */
+.title-label {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+/* Ana Buton */
+.main-button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 30;
+    -fx-cursor: hand;
+}
+
+.main-button:hover {
+    -fx-background-color: #2980b9;
+}

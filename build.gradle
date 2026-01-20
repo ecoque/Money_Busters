@@ -1,15 +1,40 @@
 plugins {
     id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.1.0'
 }
 
-group = 'org.example'
+group = 'com.paycell.intern.scriptgen'
 version = '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
 }
 
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+javafx {
+    version = "21"
+    modules = ['javafx.controls', 'javafx.fxml']
+}
+
+application {
+    mainClass = 'com.paycell.intern.scriptgen.Main'
+}
+
 dependencies {
+    // JDBC - Oracle veritabanı için (ihtiyaca göre değiştirilebilir)
+    // implementation 'com.oracle.database.jdbc:ojdbc11:23.3.0.23.09'
+
+    // Alternatif: MySQL için
+    // implementation 'mysql:mysql-connector-java:8.0.33'
+
+    // Alternatif: PostgreSQL için
+    // implementation 'org.postgresql:postgresql:42.7.1'
+
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }
